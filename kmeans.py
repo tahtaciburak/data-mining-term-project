@@ -37,9 +37,9 @@ def count_actual_classes(dataset):
     classes = [0,0]
     for sample in dataset:
         if sample[len(sample)-1] == "2":
-            classes[1] += 1
-        elif sample[len(sample)-1] == "4" :
             classes[0] += 1
+        elif sample[len(sample)-1] == "4" :
+            classes[1] += 1
     return classes
 
 def main():
@@ -53,7 +53,8 @@ def main():
     for i in range(k):
         temp = []
         for j in range(attrs_size):
-            temp.append(random.randint(1,12))
+            print(random.seed())
+            temp.append(random.randint(2,6))
         centroids.append(temp)
 
     print(centroids)

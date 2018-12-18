@@ -36,7 +36,7 @@ def majority_voting(best_matches):
             benign_count += 1
         elif classlabel == "4":
             malicant_count += 1
-    if benign_count > malicant_count:
+    if benign_count >= malicant_count:
         return "2"
     else:
         return "4"
